@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>五位火枪手</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="keywords" content="关键字" />
+		<meta name="description" content="本页描述或关键字描述" />
+    </head>
+    
+    <body>
+        <header class="hero-unit" style="background-color:#FFFFFF">
+            <div class="container">
+            	<div class="row">
+              		<div class="hero-text">
+                        {{template "default/top.html" .}}
+                        {{template "default/search.html" .}}
+                        {{template "default/navigation.html" .}}
+
+                        {{template "user/list.html" .}}                     
+
+                        <!-->
+                        <h2>{{i18n .Lang "Default.home"}}</h2>
+                        <h3>{{i18n .Lang "Default.about"}}</h3>
+                        <h4>{{i18n .Lang "Interface.unknow"}}</h4>
+                        <-->
+              		</div>
+            	</div>
+            </div>
+        </header>
+    </body>
+</html>

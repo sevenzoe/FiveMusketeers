@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>个人空间</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="keywords" content="关键字" />
+		<meta name="description" content="本页描述或关键字描述" />
+    </head>
+    
+    <body>
+        <header class="hero-unit" style="background-color:#A9F16C">
+            <div class="container">
+            	<div class="row">
+              		<div class="hero-text">
+                		<h1>{{.User.Username}} Space!</h1>
+
+                        <button type="button"><a href="{{urlfor "User.Profile"}}">{{i18n .Lang "Default.profile"}}</a></button>
+
+                        {{if .ErrorMessage}}
+                            <h2>Error Message : {{.ErrorMessage}}</h2>
+                        {{end}}
+
+                        {{if .User}}
+                            <h2>Occupation  : {{.User.Occupation}}</h2>
+                            <h3>University  : {{.User.University}}</h3>
+                            <h3>PhoneNumber : {{.User.PhoneNumber}}</h3>
+                            <h3>Introduction: {{.User.Intro}}</h3>
+                        {{end}}
+
+              		</div>
+            	</div>
+            </div>
+        </header>
+    </body>
+</html>

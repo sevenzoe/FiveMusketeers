@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	"go.buildOnSave": true,
+    "go.lintOnSave": true,
+    "go.vetOnSave": true,
+    "go.formatTool": "D:/GolangSourceCode1.4-Windows/go1.4.1.windows-amd64/work/bin",
+    "go.gopath": "D:/GolangSourceCode1.4-Windows/go1.4.1.windows-amd64/work"
+}

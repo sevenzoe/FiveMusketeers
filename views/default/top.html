@@ -1,0 +1,31 @@
+{{if .IsLogin}}
+    <button type="button"><a href="{{urlfor "User.Logout"}}">{{i18n .Lang "Default.logout"}}</a></button>
+{{else}}
+    <button type="button"><a href="{{urlfor "User.Login"}}">{{i18n .Lang "Default.login"}}</a></button>
+    <button type="button"><a href="{{urlfor "User.Signup"}}">{{i18n .Lang "Default.signup"}}</a></button>
+{{end}}
+
+<button type="button"><a href="{{urlfor "User.FindPassword"}}">{{i18n .Lang "Default.findpassword"}}</a></button>
+
+<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+
+<div>
+    <span>Current Language : {{.CurLang.Name}}</span>
+</div>
+
+<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+
+<div>
+    <span>Change Language : </span>
+    <select>
+        {{range .RestLangs}}
+            <option value ='{{.Name}}'>{{.Name}}</option>
+        {{end}}
+    </select>
+</div>
+
+<hr style="height:5px;border:none;border-top:5px ridge green;" />
+
+{{if .ErrorMessage}}
+    <h2>Error Message : {{.ErrorMessage}}</h2>
+{{end}}

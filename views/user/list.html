@@ -1,0 +1,7 @@
+<div>
+    {{if .UserList}}
+        {{range $i, $v := .UserList}}
+    	   <h4><a href="{{userspaceurl .Username}}">{{.Username}}</a></h4>
+    	{{end}}
+	{{end}}
+</div>

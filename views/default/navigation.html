@@ -1,0 +1,26 @@
+<!-->
+<nav>
+	{{range .NavList}}
+	<li>
+		<a href="{{.Link}}">{{.Name}}</d>
+	</li>
+	{{end}}
+</nav>
+<-->
+<nav>
+	<li>
+		<a href="/">{{i18n .Lang "Default.home"}}</d>
+	</li>
+	<li>
+		<a href="/news">{{i18n .Lang "Default.news"}}</d>
+	</li>
+	<li>
+		<a href="/product">{{i18n .Lang "Default.product"}}</d>
+	</li>
+	<li>
+		<a href="/jobs">{{i18n .Lang "Default.jobs"}}</d>
+	</li>
+	<li>
+		<a href="/about">{{i18n .Lang "Default.about"}}</d>
+	</li>
+</nav>
